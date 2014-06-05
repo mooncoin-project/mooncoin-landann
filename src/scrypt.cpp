@@ -27,6 +27,9 @@
  * online backup system.
  */
 
+ // Copyright (c) 2013-2014 Dogecoin Developers
+// Copyright (c) 2013-2014 Team Mooncoin
+
 #include "scrypt.h"
 #include "util.h"
 #include <stdlib.h>

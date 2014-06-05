@@ -1,3 +1,6 @@
+// Copyright (c) 2013-2014 Dogecoin Developers
+// Copyright (c) 2013-2014 Team Mooncoin
+
 #ifndef CLIENTVERSION_H
 #define CLIENTVERSION_H
 
