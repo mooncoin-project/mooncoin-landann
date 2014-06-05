@@ -1,4 +1,4 @@
-Mac OS X litecoind build instructions
+Mac OS X mooncoind build instructions
 ====================================
 
 Authors
@@ -8,6 +8,7 @@ Authors
 * Douglas Huff <dhuff@jrbobdobbs.org>
 * Colin Dean <cad@cad.cx>
 * Gavin Andresen <gavinandresen@gmail.com>
+* Alan Westbrook
 
 License
 -------
@@ -26,14 +27,16 @@ Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 Notes
 -----
 
-See `doc/readme-qt.rst` for instructions on building Litecoin-Qt, the
+See `doc/readme-qt.rst` for instructions on building Mooncoin-Qt, the
 graphical user interface.
 
-Tested on OS X 10.5 through 10.8 on Intel processors only. PPC is not
+Tested on OS X 10.6 through 10.9 on Intel processors only. PPC is not
 supported because it is big-endian.
 
 All of the commands should be executed in a Terminal application. The
 built-in one is located in `/Applications/Utilities`.
+
+Much of this may be outdated for Mooncoin.
 
 Preparation
 -----------
@@ -72,14 +75,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `litecoind`
+### Building `mooncoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:litecoin-project/litecoin.git litecoin
-        cd litecoin
+        git clone git@github.com:realmooncoin/mooncoin.git mooncoin
+        cd mooncoin
 
-2.  Build litecoind:
+2.  Build mooncoind:
 
         cd src
         make -f makefile.osx
@@ -107,7 +110,17 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `litecoind`
+For boost in mooncoin, there are some ‘fun’ things you have to do:
+
+ * download boost from source
+
+    ./bootstrap.sh
+    ./b2 --toolset=clang cxxflags="-stdlib=libstdc++" linkflags="-stdlib=libstdc++"   variant=release link=static threading=multi runtime-link=static --build-dir=build   --build-type=minimal stage --with-program_options --with-system --with-filesystem   --with-chrono --with-thread
+
+ * link the statics to /usr/local/lib/
+ * make sure the headers for boost are in /usr/local/include/boost or linked from there.
+
+### Building `mooncoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
@@ -122,7 +135,7 @@ Rerunning "openssl version" should now return the correct version.
 
         patch -p1 < contrib/homebrew/makefile.osx.patch
 
-3.  Build litecoind:
+3.  Build mooncoind:
 
         cd src
         make -f makefile.osx
@@ -166,20 +179,20 @@ Once dependencies are compiled, creating `Litecoin-Qt.app` is easy:
 Running
 -------
 
-It's now available at `./litecoind`, provided that you are still in the `src`
+It's now available at `./mooncoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./litecoind` to get the filename where it should be put, or just try these
+Run `./mooncoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=litecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
+    echo -e "rpcuser=mooncoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/mooncoin/mooncoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/mooncoin/mooncoin.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./litecoind --help  # for a list of command-line options.
-    ./litecoind -daemon # to start the litecoin daemon.
-    ./litecoind help    # When the daemon is running, to get a list of RPC commands
+    ./mooncoind --help  # for a list of command-line options.
+    ./mooncoind -daemon # to start the mooncoin daemon.
+    ./mooncoind help    # When the daemon is running, to get a list of RPC commands
