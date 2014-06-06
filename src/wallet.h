@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2013-2014 Dogecoin Developers
 // Copyright (c) 2013-2014 Team Mooncoin
 // Distributed under the MIT/X11 software license, see the accompanying
@@ -19,6 +19,8 @@
 #include "ui_interface.h"
 #include "util.h"
 #include "walletdb.h"
+
+extern bool bSpendZeroConfChange;
 
 class CAccountingEntry;
 class CWalletTx;
@@ -644,9 +646,12 @@ public:
         // Quick answer in most cases
         if (!IsFinal())
             return false;
-        if (GetDepthInMainChain() >= 1)
+        int nDepth = GetDepthInMainChain();
+        if (nDepth >= 1)
             return true;
-        if (!IsFromMe()) // using wtx's cached debit
+        if (nDepth < 0)
+            return false;
+        if (!bSpendZeroConfChange || !IsFromMe()) // using wtx's cached debit
             return false;
 
         // If no confirmations but it's from us, we can still
@@ -661,8 +666,11 @@ public:
 
             if (!ptx->IsFinal())
                 return false;
-            if (ptx->GetDepthInMainChain() >= 1)
+            int nPDepth = ptx->GetDepthInMainChain();
+            if (nPDepth >= 1)
                 continue;
+            if (nPDepth < 0)
+                return false;
             if (!pwallet->IsFromMe(*ptx))
                 return false;
 

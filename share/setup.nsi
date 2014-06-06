@@ -5,7 +5,7 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 1.862.0
+!define VERSION 1.871.0
 !define COMPANY "Mooncoin Project"
 !define URL http://mooncoin.info/
 
@@ -45,13 +45,13 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile mooncoin-1.862.0-win32-setup.exe
+OutFile mooncoin-${VERSION}-win32-setup.exe
 InstallDir $PROGRAMFILES\Mooncoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion 1.862.0
+VIProductVersion ${VERSION}
 VIAddVersionKey ProductName Mooncoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"

@@ -2,7 +2,7 @@ Mooncoin 0.8.x BETA
 ====================
 
 Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2011-2013 Litecoin Developers
+Copyright (c) 2011-2014 Litecoin Developers
 Copyright (c) 2013-2014 Dogecoin Developers
 Copyright (c) 2013-2014 Team Mooncoin
 
