@@ -143,7 +143,8 @@ macx: {
     ICON = src/mac/artwork/Mooncoin.icns
     QMAKE_INFO_PLIST=src/mac/Info.plist
     # osx 10.9 has changed the stdlib default to libc++. To prevent some link error, you may need to use libstdc++
-    QMAKE_CXXFLAGS += -stdlib=libstdc++
+    # OS X 10.6 doesn't recognise the flag at all
+    # QMAKE_CXXFLAGS += -stdlib=libstdc++
 
     QMAKE_CFLAGS_THREAD += -pthread
     QMAKE_CXXFLAGS_THREAD += -pthread
@@ -269,7 +270,6 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/macnotificationhandler.h \
     src/qt/splashscreen.h \
     src/qt/intro.h \
-    src/qt/qcustomplot.h \
     src/qt/qcustomplot.h
 
 SOURCES += src/qt/bitcoin.cpp \
@@ -344,7 +344,6 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/splashscreen.cpp \
     src/json/json_spirit_value.cpp \
     src/qt/intro.cpp \
-    src/qt/qcustomplot.cpp \
     src/qt/qcustomplot.cpp
 
 RESOURCES += src/qt/bitcoin.qrc
