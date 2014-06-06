@@ -157,3 +157,8 @@ WalletView *WalletFrame::currentWalletView()
     return qobject_cast<WalletView*>(walletStack->currentWidget());
 }
 
+void WalletFrame::updatePlot(int count)
+{
+    walletStack->updatePlot(count);
+}
+

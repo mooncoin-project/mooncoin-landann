@@ -271,3 +271,9 @@ void WalletView::unlockWallet()
         dlg.exec();
     }
 }
+
+void WalletView::updatePlot(int count)
+{
+    overviewPage->updatePlot(count);
+}
+
