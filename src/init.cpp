@@ -97,7 +97,7 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
 
-    RenameThread("bitcoin-shutoff");
+    RenameThread("mooncoin-shutoff");
     nTransactionsUpdated++;
     StopRPCThreads();
     ShutdownRPCMining();
