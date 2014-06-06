@@ -121,8 +121,8 @@ bool PaymentServer::eventFilter(QObject *object, QEvent *event)
         {
             // WTF Qt?
             QString url = fileEvent->url().toString();
-            if ( url.startsWith( "file:mooncoin:/D" ) ) {
-                url.replace( "file:mooncoin:/D", "mooncoin://D" );
+            if ( url.startsWith( "file:mooncoin:/2" ) ) {
+                url.replace( "file:mooncoin:/2", "mooncoin://2" );
             }
 
             if (saveURIs) // Before main window is ready:
