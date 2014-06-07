@@ -19,6 +19,8 @@ for more information or see http://opensource.org/licenses/MIT.
 Developers work in their own trees, then submit pull requests when they think
 their feature or bug fix is ready.
 
+Mooncoin 1.871.1.0 made by ![minkiz.co](http://minkiz.co/img/assets/minkiz.png) minkiz.co
+
 ## Frequently Asked Questions
 
 ### How many Mooncoins exist?
