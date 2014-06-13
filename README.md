@@ -26,7 +26,7 @@ Mooncoin 1.871.1.0 made by ![minkiz.co](http://minkiz.co/img/assets/minkiz.png) 
 ## Frequently Asked Questions
 
 ### How many Mooncoins exist?
-As of the time of this writing, approximately 27 billion moon have been issued. Sometime in the next five to seven years, there will be roughly 384,400,000,000 coins in existence, which is roughly one coin for every millimeter of distance from the Earth TO THE MOON!
+As of the time of this writing, approximately 117 billion MOON have been issued. Sometime in the next five to seven years, there will be roughly 384,400,000,000 coins in existence, which is roughly one coin for every millimeter of distance from the Earth TO THE MOON!
 
 ### Mooncoin details
 Scrypt Proof of Work
