@@ -21,8 +21,13 @@ their feature or bug fix is ready.
 
 Mooncoin 1.871.1.0 ![minkiz.co](http://minkiz.co/img/assets/minkiz.png) 
 
+### Linux wallet
 ![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/src/linux-wallet.png)
+
+### Windows wallet
 ![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/src/win-wallet.png)
+
+### Mac wallet
 ![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/src/mac-wallet.png)
 
 ## Frequently Asked Questions
