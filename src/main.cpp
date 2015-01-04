@@ -1127,12 +1127,12 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
                 nSubsidy = (1 + generateMTRandom(seed, 599999)) * COIN;
         } else if(nHeight <= 300000) {
                 nSubsidy = (1 + generateMTRandom(seed, 349999)) * COIN;
-        } else if(nHeight <= 333332) {
+        } else if(nHeight <= 350000) {
                 nSubsidy = (1 + generateMTRandom(seed, 174999)) * COIN;
         } else if(nHeight <= 375000) {
-                nSubsidy = 50000;
+                nSubsidy = (1 + generateMTRandom(seed, 99999)) * COIN;
         } else if(nHeight <= 384400) {
-                nSubsidy = 25000;
+                nSubsidy = (1 + generateMTRandom(seed, 49999)) * COIN;
         }
 
 	if (nHeight % 29531 == 0) {
