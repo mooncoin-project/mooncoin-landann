@@ -102,7 +102,7 @@ Note: After you have installed the dependencies, you should check that the Brew 
 
         openssl version
 
-into Terminal. You should see OpenSSL 1.0.1e 11 Feb 2013.
+into Terminal. You should see OpenSSL 1.0.1j 15 Oct 2014.
 
 If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
