@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = mooncoin-qt
 macx:TARGET = "Mooncoin-Qt"
-VERSION = 1.873.1
+VERSION = 1.875.1
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets

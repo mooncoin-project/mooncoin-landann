@@ -5,7 +5,7 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 1.873.0
+!define VERSION 1.875.0
 !define COMPANY "Mooncoin Project"
 !define URL http://mooncoin.info/
 
