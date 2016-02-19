@@ -46,10 +46,10 @@ Licenses of statically linked libraries:
 
 - Versions used in this release:
 -  GCC           4.3.3
--  OpenSSL       1.0.1c
+-  OpenSSL       1.0.1j
 -  Berkeley DB   4.8.30.NC
--  Boost         1.37
--  miniupnpc     1.6
+-  Boost         1.55
+-  miniupnpc     1.9
 
 Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
@@ -71,8 +71,8 @@ for other Ubuntu & Debian:
 
 	sudo apt-get install libdb4.8-dev
 	sudo apt-get install libdb4.8++-dev
-	sudo apt-get install libboost1.37-dev
- (If using Boost 1.37, append -mt to the boost libraries in the makefile)
+        sudo apt-get install libboost1.55-dev
+ (If using Boost 1.55, append -mt to the boost libraries in the makefile)
 
 Optional:
 
@@ -87,8 +87,8 @@ symbols, which reduces the executable size by about 90%.
 
 miniupnpc
 ---------
-	tar -xzvf miniupnpc-1.6.tar.gz
-	cd miniupnpc-1.6
+        tar -xzvf miniupnpc-1.9.tar.gz
+        cd miniupnpc-1.9
 	make
 	sudo su
 	make install
@@ -131,7 +131,7 @@ Optional:
 
 Security
 --------
-To help make your litecoin installation more secure by making certain attacks impossible to
+To help make your mooncoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -149,7 +149,7 @@ exploit even if a vulnerability is found, you can take the following measures:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./litecoin
+        scanelf -e ./mooncoin
 
     The output should contain:
      TYPE
@@ -157,13 +157,13 @@ exploit even if a vulnerability is found, you can take the following measures:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, bitcoin should be built with a non-executable stack
+    vulnerable buffers are found. By default, mooncoin should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./litecoin`
+    `scanelf -e ./mooncoin`
 
     the output should contain:
 	STK/REL/PTL
