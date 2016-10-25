@@ -2,7 +2,7 @@
 http://mooncoin.info/
 
 <!--| ![Mooncoin](http://bit.ly/moonlogo) |-->
-![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/icons/bitcoin.png)
+![Mooncoin](https://raw.githubusercontent.com/mooncoin-project/mooncoin-landann/mooncoin/src/qt/res/icons/bitcoin.png)
 
 ## What is Mooncoin?
 Mooncoin is like Bitcoin, but based on Litecoin, and aimed to take you TO THE MOON!
@@ -22,13 +22,13 @@ their feature or bug fix is ready.
 Mooncoin 1.871.1.0 ![minkiz.co](http://minkiz.co/img/assets/minkiz.png) 
 
 ### Linux wallet
-![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/src/linux-wallet.png)
+![Mooncoin](https://raw.githubusercontent.com/mooncoin-project/mooncoin/mooncoin/src/qt/res/src/linux-wallet.png)
 
 ### Windows wallet
-![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/src/win-wallet.png)
+![Mooncoin](https://raw.githubusercontent.com/mooncoin-project/mooncoin/mooncoin/src/qt/res/src/win-wallet.png)
 
 ### Mac wallet
-![Mooncoin](https://raw.githubusercontent.com/gjhiggins/mooncoin/mooncoin/src/qt/res/src/mac-wallet.png)
+![Mooncoin](https://raw.githubusercontent.com/mooncoin-project/mooncoin/mooncoin/src/qt/res/src/mac-wallet.png)
 
 ## Frequently Asked Questions
 
